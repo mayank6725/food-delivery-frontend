@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import './Notification.css'; // Import the styles
+import './Notification.css';
 
 const Notification = ({ type = 'success', message, duration = 10000, onClose }) => {
   const [progress, setProgress] = useState(100);
 
   useEffect(() => {
+    const handleClose = () => {
+      if (onClose) {
+        onClose();
+      }
+    };
+
     // Start the countdown
     const interval = setInterval(() => {
       setProgress(prev => (prev > 0 ? prev - 1 : 0));
     }, duration / 100);
 
-    // Auto-close after 10 seconds
+    // Auto-close after the specified duration
     const timer = setTimeout(() => {
       handleClose();
     }, duration);
@@ -19,19 +25,13 @@ const Notification = ({ type = 'success', message, duration = 10000, onClose }) 
       clearInterval(interval);
       clearTimeout(timer);
     };
-  }, [duration]);
-
-  const handleClose = () => {
-    if (onClose) {
-      onClose();
-    }
-  };
+  }, [duration, onClose]);
 
   return (
     <div className={`notification-container ${type}`}>
       <div className="notification-content">
         <p>{message}</p>
-        <button className="close-btn" onClick={handleClose}>
+        <button className="close-btn" onClick={() => onClose && onClose()}>
           &times;
         </button>
       </div>
