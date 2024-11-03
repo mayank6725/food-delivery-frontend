@@ -1,0 +1,230 @@
+/* General Styles */
+.restaurant-details {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.restaurant-details:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-address, p {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+.menu-section h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: left;
+  color: #333;
+}
+
+/* Menu Item Styles */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.01);
+}
+
+.item-details {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.item-details h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Item Controls */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.increase-btn,
+.decrease-btn {
+  padding: 8px 15px;
+  font-size: 18px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.increase-btn:hover,
+.decrease-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.decrease-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.quantity {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 450px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease;
+}
+
+.modal-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.modal-content button:nth-child(2) {
+  background-color: #f44336;
+}
+
+.modal-content button:nth-child(2):hover {
+  background-color: #e53935;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer styles for Proceed to Cart */
+.cart-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-footer p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.proceed-to-cart-btn {
+  background-color: #fff;
+  color: #4caf50;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.proceed-to-cart-btn:hover {
+  background-color: #45a049;
+  color: #fff;
+}

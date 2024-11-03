@@ -1,0 +1,96 @@
+.register-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.register-page {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #e74c3c, #8e44ad);
+}
+
+.register-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.register-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-box .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.register-box .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.register-box .input-group input,
+.register-box .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.register-box .input-group input:focus,
+.register-box .input-group select:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.register-box .register-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-box .register-btn:hover {
+    background-color: #c0392b;
+}
+
+.register-box .register-btn:disabled {
+    background-color: #95a5a6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

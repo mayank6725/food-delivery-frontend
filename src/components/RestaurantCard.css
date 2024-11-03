@@ -1,0 +1,50 @@
+.restaurant-card {
+    display: block; /* Ensure the link behaves as a block element */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    width: 20rem; /* Fixed width for consistency */
+    margin: 15px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.image-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.restaurant-name {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.restaurant-address {
+    color: #777;
+    margin: 5px 0;
+}
+
+.restaurant-rating {
+    font-weight: bold;
+    color: #f39c12;
+    margin: 10px 0;
+}

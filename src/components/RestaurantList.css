@@ -1,0 +1,44 @@
+body {
+    background-color: #f9cbcb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.restaurant-list-container {
+    margin: 8.5rem auto;
+    max-width: 70%;
+    text-align: center;
+}
+
+.restaurant-cards-container {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    overflow: hidden; /* Hide overflowing cards */
+}
+
+.restaurant-card-wrapper {
+    margin: 0 10px; /* Adjust spacing between cards */
+    flex: 0 0 calc(33.33% - 20px); /* Change this value to adjust how many cards to show */
+}
+
+.carousel-container {
+    position: relative; /* Position relative for button positioning */
+}
+
+.carousel-button {
+    background-color: #ff6347; /* Adjust button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px; /* Space between buttons */
+    border-radius: 5px;
+}
+
+.carousel-button:disabled {
+    background-color: #ccc; /* Disable button styling */
+    cursor: not-allowed;
+}
+
+.no-results {
+    color: #ff6347; /* Color for no results message */
+}
